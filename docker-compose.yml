@@ -56,7 +56,17 @@ services:
             - laravel-net
 
     queue:
-        build: .
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: php artisan queue:listen --timeout=1000
+        # command: php artisan queue:work --timeout=1000
+        volumes:
+            - ./:/var/www
+        # restart: always
+        depends_on:
+            - app
+            - redis
 
     redis:
         image: redis:7-alpine
