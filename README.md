@@ -2,7 +2,7 @@
 
 ## 概要
 
-laravel-dockerコンテナ環境を構築するための学習リポジトリ
+laravelのdockerコンテナ環境を構築するための学習リポジトリ
 
 ## ディレクトリ
 
@@ -11,7 +11,7 @@ root
 ├── docker/
 │   └── nginx/
 ├── Dockerfile
-├── （Laravel のファイル群）
+├── （Laravel のファイル）
 ├── docker-compose.yml
 └── .env
 ```
@@ -53,6 +53,11 @@ root
     ```shell
     $ docker compose exec app php artisan migrate:fresh --seed
     ```
+
+7. 確認
+    - [Laravel Welcome Page](http://localhost:8080)
+    - [phpMyAdmin](http://localhost:8888)
+    - [Mailpit](http://localhost:8025)
 
 ## コマンド
 
