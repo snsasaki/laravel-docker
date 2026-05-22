@@ -1,22 +1,16 @@
-### ブラウザからのリクエストを受け取るのは誰か？
+# laravel-docker
 
-- nginx
+## 概要
 
-### PHP（Laravel）のコードを実行するのは誰か？
-
-- php
-
-### データを永続化するのは誰か？
-
-- mysql(volume)
+laravel-dockerコンテナ環境を構築するための学習リポジトリ
 
 ## ディレクトリ
 
 ```
-project-root/
+root
 ├── docker/
-│   └── nginx/         # Nginx の設定ファイル
-├── Dockerfile         # PHP コンテナ用（プロジェクトルート直下）
+│   └── nginx/
+├── Dockerfile
 ├── （Laravel のファイル群）
 ├── docker-compose.yml
 └── .env
@@ -29,8 +23,6 @@ project-root/
     ```shell
     $ cp .env.example .env
     ```
-
-    既に `.env` がある場合は、`.env.example` を参考に `APP_URL`、`DB_*`、`MAIL_*` の値を Docker 用に合わせてください。
 
 2. コンテナをビルドして起動
 
