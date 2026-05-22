@@ -25,7 +25,7 @@ services:
     db:
         image: mysql:8.0
         ports:
-            - "8080:80"
+            - "3306:3306"
         environment:
             MYSQL_DATABASE: ${DB_DATABASE}
             MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
@@ -42,7 +42,7 @@ services:
         ports:
             - "8888:80"
         environment:
-            PMA_HOST: test_db
+            PMA_HOST: ${DB_HOST}
             MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
         networks:
             - laravel-net
