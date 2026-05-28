@@ -1,3 +1,5 @@
+[![Laravel CI/CD](https://github.com/snsasaki/laravel-docker/actions/workflows/ci.yml/badge.svg)](https://github.com/snsasaki/laravel-docker/actions/workflows/ci.yml)
+
 # laravel-docker
 
 ## 概要
